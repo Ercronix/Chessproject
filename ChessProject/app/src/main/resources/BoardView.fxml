@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="800.0"
+      minWidth="800.0" prefHeight="800.0" prefWidth="1000.0"
+      xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="chessproject.viewModel.BoardViewModel">
+
+    <Label layoutX="219.0" layoutY="19.0" text="Input">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <TextArea fx:id="inputTA" layoutX="14.0" layoutY="53.0" onKeyReleased="#readInputTA" prefHeight="435.0"
+              prefWidth="452.0" wrapText="true"/>
+    <TextArea fx:id="outputTA" layoutX="534.0" layoutY="53.0" prefHeight="435.0" prefWidth="452.0" wrapText="true"/>
+    <Label layoutX="732.0" layoutY="19.0" text="Output">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <Pane layoutX="15.0" layoutY="500.0" prefHeight="200.0" prefWidth="970.0">
+        <Pane layoutX="14.0" layoutY="14.0" prefHeight="27.0" prefWidth="73.0">
+            <TextField fx:id="aIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="A"/>
+            <Label fx:id="aL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="A:"/>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="41.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="bIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="B"/>
+            <Label fx:id="bL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="B:"/>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="68.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="cIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="C"/>
+            <Label fx:id="cL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="C:"/>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="95.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="dIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="D"/>
+            <Label fx:id="dL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="D:"/>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="122.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="eIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="E"/>
+            <Label fx:id="eL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="E:"/>
+        </Pane>
+        <Pane layoutX="14.0" layoutY="149.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="fIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="F"/>
+            <Label fx:id="fL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="F:"/>
+        </Pane>
+        <Pane layoutX="114.0" layoutY="14.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="gIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="G"/>
+            <Label fx:id="gL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="G:"/>
+        </Pane>
+        <Pane layoutX="114.0" layoutY="41.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="hIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="H"/>
+            <Label fx:id="hL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="H:"/>
+        </Pane>
+        <Pane layoutX="114.0" layoutY="68.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="iIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="I"/>
+            <Label fx:id="iL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="I:"/>
+        </Pane>
+        <Pane layoutX="114.0" layoutY="95.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="jIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="J"/>
+            <Label fx:id="jL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="J:"/>
+        </Pane>
+        <Pane layoutX="114.0" layoutY="122.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="kIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="K"/>
+            <Label fx:id="kL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="K:"/>
+        </Pane>
+        <Pane layoutX="114.0" layoutY="149.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="lIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="L"/>
+            <Label fx:id="lL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="L:"/>
+        </Pane>
+        <Pane layoutX="214.0" layoutY="14.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="mIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="M"/>
+            <Label fx:id="mL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="M:"/>
+        </Pane>
+        <Pane layoutX="214.0" layoutY="41.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="nIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="N"/>
+            <Label fx:id="nL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="N:"/>
+        </Pane>
+        <Pane layoutX="214.0" layoutY="68.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="oIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="O"/>
+            <Label fx:id="oL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="O:"/>
+        </Pane>
+        <Pane layoutX="214.0" layoutY="95.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="pIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="P"/>
+            <Label fx:id="pL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="P:"/>
+        </Pane>
+        <Pane layoutX="214.0" layoutY="122.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="qIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="Q"/>
+            <Label fx:id="qL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="Q:"/>
+        </Pane>
+        <Pane layoutX="214.0" layoutY="149.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="rIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="R"/>
+            <Label fx:id="rL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="R:"/>
+        </Pane>
+        <Pane layoutX="314.0" layoutY="14.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="sIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="S"/>
+            <Label fx:id="sL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="S:"/>
+        </Pane>
+        <Pane layoutX="314.0" layoutY="41.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="tIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="T"/>
+            <Label fx:id="tL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="T:"/>
+        </Pane>
+        <Pane layoutX="314.0" layoutY="68.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="uIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="U"/>
+            <Label fx:id="uL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="U:"/>
+        </Pane>
+        <Pane layoutX="314.0" layoutY="95.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="vIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="V"/>
+            <Label fx:id="vL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="V:"/>
+        </Pane>
+        <Pane layoutX="314.0" layoutY="122.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="wIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="W"/>
+            <Label fx:id="wL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="W:"/>
+        </Pane>
+        <Pane layoutX="314.0" layoutY="149.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="xIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="X"/>
+            <Label fx:id="xL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="X:"/>
+        </Pane>
+        <Pane layoutX="414.0" layoutY="14.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="yIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="Y"/>
+            <Label fx:id="yL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="Y:"/>
+        </Pane>
+        <Pane layoutX="414.0" layoutY="41.0" prefHeight="27.0" prefWidth="100.0">
+            <TextField fx:id="zIn" layoutX="75.0" layoutY="1.0" onKeyReleased="#readNewValues" prefHeight="25.0"
+                       prefWidth="25.0" text="Z"/>
+            <Label fx:id="zL" layoutX="23.0" layoutY="5.0" text="0.00%"/>
+            <Label layoutX="7.0" layoutY="5.0" text="Z:"/>
+        </Pane>
+    </Pane>
+</Pane>
